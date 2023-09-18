@@ -11,9 +11,10 @@ public class StringLab{
 	String inputString = input.next();
 	
 	StringOperations stringOps = new StringOperations(inputString);
+	System.out.printf("%s%n", stringOps.reverseString());	
 	stringOps.printCharacters();
 	stringOps.printUppers();
-	System.out.println(stringOps.numberOfVowels());
+	System.out.printf("Number of vowels: %s%n", stringOps.numberOfVowels());
 	
     }    
     
