@@ -10,32 +10,30 @@ public class Cipher {
 		this.offset = offset; 
 	}
 	
-	public String encode() {
+	private void setMessage(StringBuilder message) {
+		this.message = message.toString();
+	}
+	
+	public String encode(int offset) {
 		StringBuilder encoded_message = new StringBuilder(); 
 		
 		for (char letter : message.toCharArray()) {
+			if (letter != ' ') {
+				
 			encoded_message.append(
-					(char) ((letter - offset))
+					(char) (((letter - 71 - offset) % 26) + 71 + 26)	// <--- this is where the magic happens 
 					);
-		
-			System.out.printf("%s: %s%n", letter, (int) letter); 
-		}
-		
+			}
+			else {
+				encoded_message.append(' ');
+			}
+		}		
+		setMessage(encoded_message);
 		return encoded_message.toString(); 
 	}
 
-	public String decode(String encoded_message) {
-		StringBuilder decoded_message = new StringBuilder(); 
-		
-		for (char letter : encoded_message.toCharArray()) {
-			decoded_message.append(
-					(char) ((letter + offset))
-					);
-		
-			System.out.printf("%s: %s%n", letter, (int) letter); 
-		}
-		
-		return decoded_message.toString(); 
+	public String decode(String encoded_message, int offset) {
+		return encode(offset * -1);
 	}
 
 }
