@@ -22,6 +22,7 @@ public class Cipher {
 				
 			encoded_message.append(
 					(char) (((letter - 71 - offset) % 26) + 71 + 26)	// <--- this is where the magic happens 
+					//(char) ((letter - 'a' - offset) % 26 + 'a')	//<-- there might be some way to use 'a', i've seen someone else do it
 					);
 			}
 			else {
