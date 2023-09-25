@@ -4,6 +4,27 @@ public class DriveVehicle {
 
 	public static void main(String[] args) {
 		
+		final int MAX = 4; 
+		
+		Vehicle[] vehicles = new Vehicle[MAX];
+		
+		vehicles[0] = new Boat(22);
+		vehicles[1] = new Boat(20);
+		vehicles[2] = new Car(4);
+		vehicles[3] = new Car(3);
+		
+		for(Vehicle vehicle : vehicles) {
+			vehicle.go();
+			vehicle.stop();
+		}
+		
+		for(int i = 0; i < vehicles.length; i++) {
+			vehicles[i].go();
+			vehicles[i].stop();
+		}
+		
+		System.exit(MAX);
+		
 		Car myCar = new Car(); 
 		Boat myBoat = new Boat(17); 
 		
