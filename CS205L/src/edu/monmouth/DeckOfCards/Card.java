@@ -2,31 +2,31 @@ package edu.monmouth.DeckOfCards;
 
 public class Card {
 	
-	private int rank; 
-	private int suit; 
+	private Rank rank; 
+	private Suit suit; 
 	public static final int MAX_RANK = 13; 
 	public static final int MIN_RANK = 1; 
 	public static final int MAX_SUIT =  4; 
 	public static final int MIN_SUIT = 1;
 	
-	public Card (int rank, int suit) {
+	public Card (Rank rank, Suit suit) {
 		setRank(rank);
 		setSuit(suit);
 	}
 
-	public int getRank() {
+	public Rank getRank() {
 		return rank;
 	}
 
-	public void setRank(int rank) {
+	public void setRank(Rank rank) {
 		this.rank = rank;
 	}
 
-	public int getSuit() {
+	public Suit getSuit() {
 		return suit;
 	}
 
-	public void setSuit(int suit) {
+	public void setSuit(Suit suit) {
 		this.suit = suit;
 	}
 	
