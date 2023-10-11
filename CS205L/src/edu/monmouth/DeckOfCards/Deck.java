@@ -6,7 +6,7 @@ public class Deck {
 	
 	Random random = new Random();
 	
-	Card deck[] = new Card[DeckConstants.MAX_DECK_LENGTH];
+	Card[] deck = new Card[DeckConstants.MAX_DECK_LENGTH];
 	
 	public Deck() {
 		for (int suit = Card.MIN_SUIT; suit <= Card.MAX_SUIT; suit++) {
@@ -26,6 +26,10 @@ public class Deck {
 	}
 	
 	public Card draw() {
+		
+		if(deck.length == 0) {
+			return null;
+		}
 
 		int draw_index = random.nextInt(deck.length);
 		Card drawn_card = deck[draw_index];
@@ -35,12 +39,20 @@ public class Deck {
 		int counter = 0;
 		for (int i = 0; i < deck.length; i++) {
 			if (deck[i] != null) {
-				new_deck[counter] = deck[i];
+				new_deck[counter] = deck[i];	
 				counter++;
 			}
 		}
 		this.deck = new_deck;
 		return drawn_card;		
+	}
+	
+	public Card[] deal(int cards_in_hand) {
+		Card[] return_array = new Card[cards_in_hand];
+		for (int i = 0; i < cards_in_hand; i++) {
+			return_array[i] = draw();
+		}
+		return return_array;		
 	}
 	
 	public int cards_left() {
@@ -52,8 +64,7 @@ public class Deck {
 		StringBuilder return_string = new StringBuilder();
 		for (Card card : deck) {
 			if (card != null) {
-				return_string.append(card.getRank() + " of ");
-				return_string.append(card.getSuit() + "S, ");				
+				return_string.append(card.toString() + " ");
 			} 
 			else {
 				return_string.append("null, ");				

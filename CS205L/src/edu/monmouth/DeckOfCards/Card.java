@@ -30,6 +30,9 @@ public class Card {
 		this.suit = suit;
 	}
 	
+	@Override
+	public String toString() {
+		return this.getRank() + " of " + this.getSuit() + "S"; 
+	}
 	
-
 }
