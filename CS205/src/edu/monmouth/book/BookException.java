@@ -1,5 +1,13 @@
 package edu.monmouth.book;
 
-public class BookException {
+public class BookException extends Exception {
+	
+	public BookException() {
+		;
+	}
+	
+	public BookException(String msg) {
+		super(msg);
+	}
 
 }

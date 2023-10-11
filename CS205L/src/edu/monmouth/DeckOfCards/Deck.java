@@ -30,7 +30,7 @@ public class Deck {
 		if(deck.length == 0) {
 			return null;
 		}
-
+		
 		int draw_index = random.nextInt(deck.length);
 		Card drawn_card = deck[draw_index];
 		deck[draw_index] = null;

@@ -4,6 +4,13 @@ public class DriveVehicle {
 
 	public static void main(String[] args) {
 		
+		VehicleLinkedList list = new VehicleLinkedList();
+		list.insert(new Boat(20));
+		list.insert(new Boat(20));
+		list.insert(new Car(4));
+		System.out.printf("%s%n", list);
+	}
+		/*
 		final int MAX = 4; 
 		
 		Vehicle[] vehicles = new Vehicle[MAX];
@@ -46,5 +53,7 @@ public class DriveVehicle {
 	public static void makeItStop(Vehicle vehicle) {
 		vehicle.stop(); 		
 	}
+	
+	*/
 
 }

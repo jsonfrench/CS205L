@@ -28,7 +28,12 @@ public class Car implements Vehicle {
 	@Override
 	public void stop() {
 		System.out.printf("apply brakes%n");
-
 	}
+
+	@Override
+	public String toString() {
+		return "Car [engineSize=" + engineSize + "]";
+	}
+	
 
 }

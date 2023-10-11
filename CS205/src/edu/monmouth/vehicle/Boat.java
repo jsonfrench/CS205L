@@ -30,4 +30,9 @@ public class Boat implements Vehicle {
 		System.out.printf("Reverse propeller%n");
 	}
 
+	@Override
+	public String toString() {
+		return "Boat [length=" + length + "]";
+	}
+
 }
