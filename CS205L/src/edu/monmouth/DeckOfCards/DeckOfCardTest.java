@@ -8,21 +8,49 @@ public class DeckOfCardTest {
 		
 		int cards_in_hand = 0;
 		try {
-			cards_in_hand = Integer.valueOf(args[0]);
+			cards_in_hand = Integer.parseInt(args[0]);
 		} catch (IndexOutOfBoundsException err) {
 			System.err.printf("Args[] array must have at least 1 element: %s%n", err);
+			System.exit(DeckConstants.EXIT_OUT_OF_BOUNDS);
+		} catch (NumberFormatException err) {
+			System.err.printf("Argument[0] must be of type int: %s%n", err);			
+			System.exit(DeckConstants.EXIT_NOT_AN_INTEGER);
 		}
 		
+		
 		Deck deck = new Deck();
+		
+		int num_players = 4;
+		Card[][] player_hands = new Card[num_players][cards_in_hand];
 
+		
+		for(int i = 0; i < player_hands.length; i++) {
+			try {
+				player_hands[i] = deck.deal(cards_in_hand);
+				System.out.printf("%s%n", Arrays.toString(player_hands[i]));
+			} catch (DeckException err) {
+				System.err.printf("Cannot deal cards - no cards left in deck: %s%n", err);
+				System.exit(DeckConstants.EXIT_OUT_OF_BOUNDS);				
+			}
+		}
+		
+		/*
+		try {
 		Card player1Hand[] = deck.deal(cards_in_hand);
 		System.out.printf("%s%n", Arrays.toString(player1Hand));
+		} catch (DeckException err) {
+			System.out.printf("%s%n", err);
+		}
+		*/
+		
+		/*
 		Card player2Hand[] = deck.deal(cards_in_hand);
 		System.out.printf("%s%n", Arrays.toString(player2Hand));
 		Card player3Hand[] = deck.deal(cards_in_hand);
 		System.out.printf("%s%n", Arrays.toString(player3Hand));
 		Card player4Hand[] = deck.deal(cards_in_hand);
 		System.out.printf("%s%n", Arrays.toString(player4Hand));
+*/
 		
 		/*
 		

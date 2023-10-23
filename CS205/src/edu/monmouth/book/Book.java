@@ -14,12 +14,19 @@ public class Book {
 		setPrice(price);
 	}
 
+	public Book(int number_of_pages, double price, String title, BookTypes book_type) throws BookException{
+		setNumber_of_pages(number_of_pages);
+		setBook_type(book_type);
+		setTitle(title);
+		setPrice(price);
+	}
+
 	public int getNumber_of_pages() {
 		return number_of_pages;
 	}
 
 	public void setNumber_of_pages(int number_of_pages) throws BookException{
-		if (number_of_pages < 0) {
+		if (number_of_pages < 1) {
 			throw new BookException("Number of pages must be greater than zero");
 		}
 		this.number_of_pages = number_of_pages;
@@ -38,7 +45,7 @@ public class Book {
 	}
 
 	public void setTitle(String title) throws BookException {
-		if (title == null || title.length() > 0) {
+		if (title == null || title.length() == 0) {
 			throw new BookException("Title is null or has length zero");
 		}
 		this.title = title;

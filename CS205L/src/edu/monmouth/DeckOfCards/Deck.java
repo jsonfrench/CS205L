@@ -25,10 +25,11 @@ public class Deck {
 		}
 	}
 	
-	public Card draw() {
+	public Card draw() throws DeckException {
 		
 		if(deck.length == 0) {
-			return null;
+			//return null;
+			throw new DeckException();
 		}
 		
 		int draw_index = random.nextInt(deck.length);
@@ -47,7 +48,7 @@ public class Deck {
 		return drawn_card;		
 	}
 	
-	public Card[] deal(int cards_in_hand) {
+	public Card[] deal(int cards_in_hand) throws DeckException {
 		Card[] return_array = new Card[cards_in_hand];
 		for (int i = 0; i < cards_in_hand; i++) {
 			return_array[i] = draw();
