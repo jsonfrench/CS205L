@@ -64,7 +64,9 @@ public class Book {
 	
 	@Override
 	public String toString() {
-		return "number_of_pages=" + number_of_pages + " book_type=" + book_type + " title=" + title + " price=" + price;
+		return "Book [number_of_pages=" + number_of_pages + " book_type=" + book_type + " title=" + title + " price=" + price + "]";
 	}
+	
+	
 
 }

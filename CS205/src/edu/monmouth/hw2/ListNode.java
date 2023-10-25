@@ -1,5 +1,7 @@
 package edu.monmouth.hw2;
 
+import edu.monmouth.book.*;
+
 public class ListNode {
 	
 	private Node head; 
@@ -10,39 +12,61 @@ public class ListNode {
   
 	public Node removeFirst() {
 	  /* placeholder */
-		return null;
+		if (isEmpty()) {
+			return null;
+		}
+		Node remove = head; 
+		head = head.getNext();
+		return remove;
 		}
   
   
 	public Node first() {
 	    /* placeholder */
-		return null;
+		return head;
 		}
   
 	public Node last() {
 	   /* placeholder */
-		return null;
+		if (isEmpty()) {
+			return null;
+		}
+		Node current = head; 
+		while (current.getNext() != null) {
+			current = current.getNext();
+		}
+		return current;
 		}
 
-	public void insert(String element) {
-		Node newNode = new Node(element);
+	public void insert(Book book) {
+		Node newNode = new Node(book);
 		newNode.setNext(head);
 		head = newNode;
 		}
 
-	public void insertEnd(String element) {
+	public void insertEnd(Book element) {
 	/* placeholder */
-		return; 
+		Node current = head; 
+		while (current.getNext() != null) {
+			current = current.getNext();
+		}
+		current.setNext(new Node(element));
 		}
 	
 	public boolean isEmpty() { 
-	/* placeholder */
-		return true;
+		/* placeholder */
+		return head==null;
 		}
   
 	public int size() {
 		/* placeholder */
-		return 0;
+		Node current = head; 
+		int count = 0;
+		while (current.getNext() != null) {
+			current = current.getNext();
+			count++;
+		}
+		return count; 
 		}
     
 	public void clear() {

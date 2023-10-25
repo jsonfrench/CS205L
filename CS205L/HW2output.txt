@@ -1,0 +1,24 @@
+First: null
+Removed first: null
+Last: null
+Entire list: 
+
+After inserting 3 books: 
+1 . Book [number_of_pages=239 book_type=HARDBACK title=Undaunted Courage price=32.5]
+2 . Book [number_of_pages=129 book_type=SOFTBACK title=For Whom the Bell Tolls price=15.0]
+3 . Book [number_of_pages=88 book_type=HARDBACK title=To Kill a Mockingbird price=25.75]
+
+After adding fourth book: 
+1 . Book [number_of_pages=239 book_type=HARDBACK title=Undaunted Courage price=32.5]
+2 . Book [number_of_pages=129 book_type=SOFTBACK title=For Whom the Bell Tolls price=15.0]
+3 . Book [number_of_pages=88 book_type=HARDBACK title=To Kill a Mockingbird price=25.75]
+4 . Book [number_of_pages=12 book_type=HARDBACK title=Goodnight Moon price=12.5]
+
+First: Node [Book [number_of_pages=239 book_type=HARDBACK title=Undaunted Courage price=32.5],Node [Book [number_of_pages=129 book_type=SOFTBACK title=For Whom the Bell Tolls price=15.0],Node [Book [number_of_pages=88 book_type=HARDBACK title=To Kill a Mockingbird price=25.75],Node [Book [number_of_pages=12 book_type=HARDBACK title=Goodnight Moon price=12.5],null]]]]
+Last: Node [Book [number_of_pages=12 book_type=HARDBACK title=Goodnight Moon price=12.5],null]
+Removed first: Node [Book [number_of_pages=239 book_type=HARDBACK title=Undaunted Courage price=32.5],Node [Book [number_of_pages=129 book_type=SOFTBACK title=For Whom the Bell Tolls price=15.0],Node [Book [number_of_pages=88 book_type=HARDBACK title=To Kill a Mockingbird price=25.75],Node [Book [number_of_pages=12 book_type=HARDBACK title=Goodnight Moon price=12.5],null]]]]
+Entire list: 
+1 . Book [number_of_pages=129 book_type=SOFTBACK title=For Whom the Bell Tolls price=15.0]
+2 . Book [number_of_pages=88 book_type=HARDBACK title=To Kill a Mockingbird price=25.75]
+3 . Book [number_of_pages=12 book_type=HARDBACK title=Goodnight Moon price=12.5]
+
