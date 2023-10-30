@@ -1,0 +1,15 @@
+Iterating forward through list
+SalaryEmployee [yearly_salary=30000]
+SalaryEmployee [yearly_salary=35000]
+PieceEmployee [rate_per_piece=60, pieces_made=2000]
+PieceEmployee [rate_per_piece=40, pieces_made=3500]
+SalaryEmployee [yearly_salary=100000]
+SalesEmployee [commission=30000, yearly_base=60000]
+Iterating forward here is each monthlyPay
+Iterating forward after removal
+Contents of array
+SalaryEmployee [yearly_salary=35000]
+PieceEmployee [rate_per_piece=60, pieces_made=2000]
+PieceEmployee [rate_per_piece=40, pieces_made=3500]
+SalaryEmployee [yearly_salary=100000]
+SalesEmployee [commission=30000, yearly_base=60000]
