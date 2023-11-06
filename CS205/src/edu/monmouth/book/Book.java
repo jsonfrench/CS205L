@@ -62,11 +62,23 @@ public class Book {
 		this.price = price;
 	}
 	
+	@Override 
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (!(obj instanceof Book)) {
+			return false;
+		}
+		Book that = (Book) obj;
+		return this.title == that.title
+				&& this.number_of_pages == that.number_of_pages
+				&& this.book_type == that.book_type;
+	}
+	
 	@Override
 	public String toString() {
 		return "Book [number_of_pages=" + number_of_pages + " book_type=" + book_type + " title=" + title + " price=" + price + "]";
 	}
 	
-	
-
 }
