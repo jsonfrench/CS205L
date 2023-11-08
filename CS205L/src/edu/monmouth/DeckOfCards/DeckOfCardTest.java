@@ -2,6 +2,9 @@ package edu.monmouth.DeckOfCards;
 
 import java.util.Arrays;
 
+import edu.monmouth.card.Card;
+import edu.monmouth.card.Rank;
+
 public class DeckOfCardTest {
 
 	public static void main(String args[] ) {
@@ -20,8 +23,7 @@ public class DeckOfCardTest {
 		
 		Deck deck = new Deck();
 		
-		int num_players = 4;
-		Card[][] player_hands = new Card[num_players][cards_in_hand];
+		Card[][] player_hands = new Card[DeckConstants.NUMBER_OF_PLAYERS][cards_in_hand];
 
 		
 		for(int i = 0; i < player_hands.length; i++) {
@@ -29,10 +31,17 @@ public class DeckOfCardTest {
 				player_hands[i] = deck.deal(cards_in_hand);
 				System.out.printf("%s%n", Arrays.toString(player_hands[i]));
 			} catch (DeckException err) {
-				System.err.printf("Cannot deal cards - no cards left in deck: %s%n", err);
-				System.exit(DeckConstants.EXIT_OUT_OF_BOUNDS);				
+				System.err.printf("Cannot deal cards - no cards left in deck: %n%s%n", err.getStackTrace());
+				System.exit(DeckConstants.EXIT_OUT_OF_BOUNDS); 
 			}
 		}
+		
+		for (Card[] hand: player_hands) {
+			System.out.printf("%s%n", deck.get_hand_value(hand));
+		}
+		
+		System.out.printf("lowest: %s%n", deck.get_lowest_player(player_hands));
+		System.out.printf("highest: %s%n", deck.get_highest_player(player_hands));
 		
 		/*
 		try {

@@ -2,6 +2,10 @@ package edu.monmouth.DeckOfCards;
 
 import java.util.Random;
 
+import edu.monmouth.card.Card;
+import edu.monmouth.card.Rank;
+import edu.monmouth.card.Suit;
+
 public class Deck {
 	
 	Random random = new Random();
@@ -58,6 +62,44 @@ public class Deck {
 	
 	public int cards_left() {
 		return deck.length;
+	}
+	
+	public int get_hand_value(Card[] hand) {
+		int value_of_hand = 0;
+		for (Card card: hand) {
+			value_of_hand += card.getRank().ordinal()+1;
+		}
+		return value_of_hand;
+	}
+	
+	public int get_lowest_player(Card[][] player_hands) {
+		int[] hand_values = new int[player_hands.length];
+		for (int i = 0; i < player_hands.length; i++) {			
+			hand_values[i] = get_hand_value(player_hands[i]);
+		}
+		int return_value = hand_values[0];
+		for (int i = 0; i < hand_values.length-1; i++) {
+			if (hand_values[i+1] < return_value) {
+				return_value = hand_values[i+1];
+				//System.out.printf("replaced %s with %s%n", hand_values[i], hand_values[i+1]);
+			}
+		}
+		return return_value;
+	}
+
+	public int get_highest_player(Card[][] player_hands) {
+		int[] hand_values = new int[player_hands.length];
+		for (int i = 0; i < player_hands.length; i++) {			
+			hand_values[i] = get_hand_value(player_hands[i]);
+		}
+		int return_value = hand_values[0];
+		for (int i = 0; i < hand_values.length-1; i++) {
+			if (hand_values[i+1] > return_value) {
+				return_value = hand_values[i+1];
+				//System.out.printf("replaced %s with %s%n", hand_values[i], hand_values[i+1]);
+			}
+		}
+		return return_value;
 	}
 
 	@Override
