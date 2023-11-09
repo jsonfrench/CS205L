@@ -2,19 +2,12 @@ package edu.monmouth.book;
 
 public class Book {
 	
-	int number_of_pages; 
-	BookTypes book_type; 
-	String title; 
-	double price; 
+	private int number_of_pages; 
+	private BookTypes book_type; 
+	private String title; 
+	private double price; 
 	
 	public Book(int number_of_pages, BookTypes book_type, String title, double price) throws BookException{
-		setNumber_of_pages(number_of_pages);
-		setBook_type(book_type);
-		setTitle(title);
-		setPrice(price);
-	}
-
-	public Book(int number_of_pages, double price, String title, BookTypes book_type) throws BookException{
 		setNumber_of_pages(number_of_pages);
 		setBook_type(book_type);
 		setTitle(title);
