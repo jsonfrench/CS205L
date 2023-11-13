@@ -1,3 +1,47 @@
+edu.monmouth.book.BookException: Number of pages must be greater than zero
+	at edu.monmouth.book.Book.setNumber_of_pages(Book.java:30)
+	at edu.monmouth.book.Book.<init>(Book.java:11)
+	at edu.monmouth.hw3.HW3.main(HW3.java:53)
+java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2 Not enough values in the line.
+java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+	at edu.monmouth.hw3.HW3.main(HW3.java:53)
+Number contains invalid characters.
+java.lang.NumberFormatException: For input string: "SOFTBACK"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at edu.monmouth.hw3.HW3.main(HW3.java:53)
+edu.monmouth.book.BookException: Price cannot be negative
+	at edu.monmouth.book.Book.setPrice(Book.java:60)
+	at edu.monmouth.book.Book.<init>(Book.java:14)
+	at edu.monmouth.hw3.HW3.main(HW3.java:53)
+java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1 Not enough values in the line.
+java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
+	at edu.monmouth.hw3.HW3.main(HW3.java:53)
+Number contains invalid characters.
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:678)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at edu.monmouth.hw3.HW3.main(HW3.java:53)
+edu.monmouth.book.BookException: Title is null or has length zero
+	at edu.monmouth.book.Book.setTitle(Book.java:49)
+	at edu.monmouth.book.Book.<init>(Book.java:13)
+	at edu.monmouth.hw3.HW3.main(HW3.java:53)
+Number contains invalid characters.
+java.lang.NumberFormatException: For input string: "7o"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at edu.monmouth.hw3.HW3.main(HW3.java:53)
+
+Arraylist methods:
+===============
+Is strings empty? false 
+Is books empty? false 
+Removing Monmouth University from strings...
+Size of strings: 6
+Size of books: 12
 Monmouth University
 West Long Branch
 February
@@ -5,3 +49,41 @@ Cloud Computing
 Data Structures
 MacBook
 Spacex
+Homework 3
+Homework 3
+Spacex
+MacBook
+Data Structures
+Cloud Computing
+February
+West Long Branch
+Monmouth University
+
+Linkedlist methods:
+===============
+Book [number_of_pages=120 book_type=HARDBACK title=The Lord of the Rings price=29.99]
+Book [number_of_pages=426 book_type=SOFTBACK title=Data Structures and Algorithms price=79.99]
+Book [number_of_pages=212 book_type=HARDBACK title=The Hobbit price=32.5]
+Book [number_of_pages=253 book_type=HARDBACK title=The Da Vinci Code price=25.0]
+Book [number_of_pages=156 book_type=SOFTBACK title=And Then There Were None price=19.99]
+Book [number_of_pages=439 book_type=ELECTRONIC title=Harry Potter and the Half-Blood Prince price=19.99]
+Book [number_of_pages=156 book_type=HARDBACK title=And Then There Were None price=39.99]
+Book [number_of_pages=320 book_type=HARDBACK title=Opus 200 price=40.99]
+Book [number_of_pages=829 book_type=HARDBACK title=The Soloman Curse price=23.95]
+Book [number_of_pages=320 book_type=HARDBACK title=American Sniper price=16.2]
+Book [number_of_pages=391 book_type=SOFTBACK title=The Girl on the Train price=23.87]
+Book [number_of_pages=231 book_type=HARDBACK title=Citizen Soldier price=54.99]
+Is Book [number_of_pages=120 book_type=HARDBACK title=The Lord of the Rings price=29.99] in books_linkedlist? true
+Removing Book [number_of_pages=120 book_type=HARDBACK title=The Lord of the Rings price=29.99]...
+Is Book [number_of_pages=120 book_type=HARDBACK title=The Lord of the Rings price=29.99] in books_linkedlist? false
+Book [number_of_pages=231 book_type=HARDBACK title=Citizen Soldier price=54.99]
+Book [number_of_pages=391 book_type=SOFTBACK title=The Girl on the Train price=23.87]
+Book [number_of_pages=320 book_type=HARDBACK title=American Sniper price=16.2]
+Book [number_of_pages=829 book_type=HARDBACK title=The Soloman Curse price=23.95]
+Book [number_of_pages=320 book_type=HARDBACK title=Opus 200 price=40.99]
+Book [number_of_pages=156 book_type=HARDBACK title=And Then There Were None price=39.99]
+Book [number_of_pages=439 book_type=ELECTRONIC title=Harry Potter and the Half-Blood Prince price=19.99]
+Book [number_of_pages=156 book_type=SOFTBACK title=And Then There Were None price=19.99]
+Book [number_of_pages=253 book_type=HARDBACK title=The Da Vinci Code price=25.0]
+Book [number_of_pages=212 book_type=HARDBACK title=The Hobbit price=32.5]
+Book [number_of_pages=426 book_type=SOFTBACK title=Data Structures and Algorithms price=79.99]

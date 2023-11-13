@@ -9,7 +9,6 @@ public class HW3 {
 
 	public static void main(String[] args) {
 		
-		/*
 		try {
 			PrintStream newIO = new PrintStream(HW3Constants.output_file);	
 			System.setOut(newIO);
@@ -19,7 +18,6 @@ public class HW3 {
 			e.printStackTrace();
 			System.exit(HW3Constants.err_redirect);	
 			}
-		*/
 		
 		//create lists for strings a books
 		List<String> strings_arraylist = new ArrayList<String>();
@@ -43,14 +41,6 @@ public class HW3 {
 		      System.exit(HW3Constants.err_read_file);
 		    }
 		
-		/*
-		for (String s: strings_arraylist) {
-			System.out.printf("%s%n", s);
-		}
-		for (String s: strings_linkedlist) {
-			System.out.printf("%s%n", s);
-		}
-		*/
 		
 		//read contents from book.txt
 		try {
@@ -80,21 +70,6 @@ public class HW3 {
 		      System.exit(HW3Constants.err_read_file);
 		    }
 		
-		/*
-		 * Use the following (ArrayList): 
-		 * isEmpty
-		 * remove (using index)
-		 * size
-		 * add
-		 * iterator
-		 * listIterator (iterate in reverse order)
-		 * 
-		 * Use the following (LinkedList):
-		 * add
-		 * listIterator (iterate in reverse order
-		 * iterator
-		 * contains and remove - 1) with a book object in the list 2) with a book that isn't in the list
-		 */
 		
 		//arraylist methods
 		System.out.printf("%nArraylist methods:%n===============%n");

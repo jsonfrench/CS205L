@@ -19,10 +19,10 @@ public class HW2 {
 		Book book4 = null;
 		
 		try{
-			book1 = new Book(88, 25.75, "To Kill a Mockingbird", BookTypes.HARDBACK);
-			book2 = new Book(129, 15, "For Whom the Bell Tolls", BookTypes.SOFTBACK);
-			book3 = new Book(239, 32.50, "Undaunted Courage", BookTypes.HARDBACK);
-			book4 = new Book(12, 12.50, "Goodnight Moon", BookTypes.HARDBACK);
+			book1 = new Book(88, BookTypes.HARDBACK, "To Kill a Mockingbird", 25.75);
+			book2 = new Book(129, BookTypes.SOFTBACK, "For Whom the Bell Tolls", 15);
+			book3 = new Book(239, BookTypes.HARDBACK, "Undaunted Courage", 32.50);
+			book4 = new Book(12, BookTypes.HARDBACK, "Goodnight Moon", 12.50);
 		} catch(BookException e) {
 			System.err.println("Cannot create all books");
 			System.exit(HW2Constants.BOOKFAILURE);

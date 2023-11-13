@@ -1,0 +1,37 @@
+Book was not added to HashSet
+Book was not added to HashSet
+Book was not added to HashSet
+edu.monmouth.book.BookException: Number of pages must be greater than zero
+	at edu.monmouth.book.Book.setNumber_of_pages(Book.java:23)
+	at edu.monmouth.book.Book.<init>(Book.java:11)
+	at edu.monmouth.hw4.BookHW4.main(BookHW4.java:50)
+Book was not added to HashSet
+Book was not added to HashSet
+edu.monmouth.book.BookException: Price cannot be negative
+	at edu.monmouth.book.Book.setPrice(Book.java:53)
+	at edu.monmouth.book.Book.<init>(Book.java:14)
+	at edu.monmouth.hw4.BookHW4.main(BookHW4.java:50)
+Book was not added to HashSet
+Book was not added to HashSet
+Book was not added to HashSet
+Book was not added to HashSet
+Book was not added to HashSet
+edu.monmouth.book.BookException: Title is null or has length zero
+	at edu.monmouth.book.Book.setTitle(Book.java:42)
+	at edu.monmouth.book.Book.<init>(Book.java:13)
+	at edu.monmouth.hw4.BookHW4.main(BookHW4.java:50)
+Book was not added to HashSet
+Book was not added to HashSet
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+dspfoajfj
