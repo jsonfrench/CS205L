@@ -50,19 +50,22 @@ public class BookHW4 {
 		        try {
 		        	Book book = new Book(Integer.parseInt(a[2]), BookTypes.valueOf(a[1]), a[0], Double.parseDouble(a[3]));
 					if (bookSet.add(book) == true) {
-						System.out.println("successfully added book to HashSet");
+						System.out.printf("successfully added book to HashSet%n");
 					} else {
-						System.out.println("Book was not added to HashSet");
+						System.out.printf("Book was not added to HashSet%n");
 					}
 				} catch (ArrayIndexOutOfBoundsException e) {
 					System.err.printf("%s ", e);
 					System.err.printf("Not enough values in the line.%n");
 					e.printStackTrace();
+					System.out.printf("Book was not added to HashSet%n");
 				} catch (BookException e) {
 					e.printStackTrace();
+					System.out.printf("Book was not added to HashSet%n");
 				} catch (NumberFormatException e) {
 					System.err.printf("Number contains invalid characters.%n");
 					e.printStackTrace();
+					System.out.printf("Book was not added to HashSet%n");
 				}
 		      }
 		      reader.close();
@@ -71,7 +74,6 @@ public class BookHW4 {
 		      e.printStackTrace();
 		      System.exit(HW4Constants.FILE_READ_ERROR);
 		    }
-
 		
 		// after data file is read and valid Book objects added to Hashset iterate over HashSet 
 		// printing each Book object 
@@ -79,21 +81,20 @@ public class BookHW4 {
 		for (Book book : bookSet) {
 			System.out.printf("%s%n", book);
 		}
-
-		
-		/*
-		
 		
 		// determine if the following 2 books are in the HashSet
 		Book bookToFind = null;
 		try {
-			bookToFind = new Book(829, 23.95, "The Soloman Curse", BookTypes.HARDBACK);
+			bookToFind = new Book(829, BookTypes.HARDBACK, "The Soloman Curse", 23.95);
+			//System.out.printf("%s%n", bookSet.toArray()[bookSet.toArray().length - 1].equals(bookToFind));
+			System.out.printf("does it contain??%s%n", bookSet.contains(bookSet.toArray()[bookSet.toArray().length - 1]));
+			System.out.printf("does it contain??%s%n", bookSet.contains(bookToFind));
 			if(bookSet.contains(bookToFind)== true) {
 				System.out.println(bookToFind + "\nExists in bookSet");
 			} else {
 				System.out.println(bookToFind + "\nDoes not exist in bookSet");
 			}
-			bookToFind = new Book(629, 87.00, "The BigBang Theory", BookTypes.HARDBACK);
+			bookToFind = new Book(629,  BookTypes.HARDBACK, "The BigBang Theory", 87.00);
 			if(bookSet.contains(bookToFind)== true) {
 				System.out.println(bookToFind + "\nExists in bookSet");
 			} else {
@@ -102,11 +103,6 @@ public class BookHW4 {
 		} catch (BookException e) {
 			System.err.println("Cannot create a Book object from these values:\n" + bookToFind + e.getMessage());
 		}
-		
-		
-		
-		*/
-		
 	}
 }
 

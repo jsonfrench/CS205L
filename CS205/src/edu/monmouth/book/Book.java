@@ -63,10 +63,11 @@ public class Book {
 		if (!(obj instanceof Book)) {
 			return false;
 		}
-		Book that = (Book) obj;
-		return this.title == that.title
+		Book that = (Book) obj;		
+			return this.title.equals(that.title)
 				&& this.number_of_pages == that.number_of_pages
-				&& this.book_type == that.book_type;
+				&& this.book_type == that.book_type
+				&& this.price == that.price;
 	}
 	
 	@Override
