@@ -1,0 +1,28 @@
+.equals returns flase 
+2750 2441
+.equals returns flase 
+710 675
+object was added successfully
+object was added successfully
+object was added successfully
+object was added successfully
+object was added successfully
+object was added successfully
+object was not added
+State [name=Maryland, coast_length=31, state_bird=Oriole]
+State [name=Delaware, coast_length=28, state_bird=Blue Hen]
+State [name=Pennsylvania, coast_length=0, state_bird=Ruffled Grouse]
+State [name=New York, coast_length=127, state_bird=Eastern Bluebird]
+State [name=Connecticut, coast_length=96, state_bird=Robin]
+State [name=New Jersey, coast_length=130, state_bird=Eastern Goldfinch]
+Elements in HashMap: 6
+State [name=Maryland, coast_length=31, state_bird=Oriole]: Governor [name=Murphy, age=65]
+State [name=Delaware, coast_length=28, state_bird=Blue Hen]: Governor [name=Hochul, age=64]
+State [name=Pennsylvania, coast_length=0, state_bird=Ruffled Grouse]: Governor [name=Shapiro, age=49]
+State [name=New York, coast_length=127, state_bird=Eastern Bluebird]: Governor [name=Carney, age=66]
+State [name=Connecticut, coast_length=96, state_bird=Robin]: Governor [name=Moore, age=44]
+State [name=New Jersey, coast_length=130, state_bird=Eastern Goldfinch]: Governor [name=Lamont, age=69]
+Governor [name=Carney, age=66]
+Does New Jersey exist? true
+Governor [name=Lamont, age=69]
+Does New Rhode Island exist? false
