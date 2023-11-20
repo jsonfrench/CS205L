@@ -4,14 +4,14 @@ successfully added book to HashSet
 edu.monmouth.book.BookException: Number of pages must be greater than zero
 	at edu.monmouth.book.Book.setNumber_of_pages(Book.java:23)
 	at edu.monmouth.book.Book.<init>(Book.java:11)
-	at edu.monmouth.hw4.BookHW4.main(BookHW4.java:51)
+	at edu.monmouth.hw4.BookHW4.main(BookHW4.java:50)
 Book was not added to HashSet
 successfully added book to HashSet
 successfully added book to HashSet
 edu.monmouth.book.BookException: Price cannot be negative
 	at edu.monmouth.book.Book.setPrice(Book.java:53)
 	at edu.monmouth.book.Book.<init>(Book.java:14)
-	at edu.monmouth.hw4.BookHW4.main(BookHW4.java:51)
+	at edu.monmouth.hw4.BookHW4.main(BookHW4.java:50)
 Book was not added to HashSet
 successfully added book to HashSet
 successfully added book to HashSet
@@ -21,7 +21,7 @@ successfully added book to HashSet
 edu.monmouth.book.BookException: Title is null or has length zero
 	at edu.monmouth.book.Book.setTitle(Book.java:42)
 	at edu.monmouth.book.Book.<init>(Book.java:13)
-	at edu.monmouth.hw4.BookHW4.main(BookHW4.java:51)
+	at edu.monmouth.hw4.BookHW4.main(BookHW4.java:50)
 Book was not added to HashSet
 successfully added book to HashSet
 successfully added book to HashSet
@@ -37,6 +37,8 @@ Book [number_of_pages=253 book_type=HARDBACK title=The Da Vinci Code price=25.0]
 Book [number_of_pages=320 book_type=HARDBACK title=American Sniper price=16.2]
 Book [number_of_pages=120 book_type=HARDBACK title=The Lord of the Rings price=29.99]
 Book [number_of_pages=829 book_type=HARDBACK title=The Soloman Curse price=23.95]
+does it contain??true
+does it contain??false
 Book [number_of_pages=829 book_type=HARDBACK title=The Soloman Curse price=23.95]
 Does not exist in bookSet
 Book [number_of_pages=629 book_type=HARDBACK title=The BigBang Theory price=87.0]

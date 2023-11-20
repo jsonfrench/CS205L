@@ -25,7 +25,6 @@ public class BookHW4 {
 		}		
 		
 		// redirect stdout & stderr to specified file
-/*
 		try {
 			PrintStream newIO = new PrintStream(redirect_file);	
 			System.setOut(newIO);
@@ -35,7 +34,7 @@ public class BookHW4 {
 			e.printStackTrace();
 			System.exit(HW4Constants.REDIRECT_ERROR);	
 			}
-*/		
+		
 		// create a HashSet that contains Book objects (name it bookSet)
 		Set<Book> bookSet = new HashSet<Book>();
 		
