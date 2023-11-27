@@ -30,12 +30,12 @@ public class hw4stack {
 		//read contents of StackPalindrome.properties
 		String logfile = "";
 		try {
-			File infile = new File(hw4stack.class.getClassLoader().getResource("StackPalindrome.properties").getFile()); //<-- Jesus christ this line scares me but its the only thing that got my program to work. 
+			File infile = new File(args[0]); 
 			Scanner reader = new Scanner(infile);
 		      while (reader.hasNextLine()) {
 		        String data = reader.nextLine();
 		        String[] a = data.split("=");
-		        logfile = a[1];					//<--somehow extract StackPalindromeLog.txt from this mess
+		        logfile = a[0];	
 		      }
 		      reader.close();
 		    } catch (FileNotFoundException e) {
@@ -53,8 +53,7 @@ public class hw4stack {
 			System.err.println(e.getMessage() + " Cannot redirect STDERR or STDOUT ");
 			e.printStackTrace();
 			System.exit(REDIRECT_ERROR);	
-			}
-		
+			}		
 		
 		Stack<Character> stack = new Stack<Character>();
 		
