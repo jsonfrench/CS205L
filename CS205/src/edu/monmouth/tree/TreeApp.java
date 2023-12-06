@@ -69,24 +69,28 @@ public class TreeApp {
 		
 		// parse the key / value pairs of node_values and insert into tree
 	 	String[] kvpairs = node_values.split(";");
-	 	String[][] b = new String[kvpairs.length][2];
+	 	String[][] split_pairs = new String[kvpairs.length][2];
 	 	for (int i = 0; i < kvpairs.length; i++) {
 	 		String key_or_value[] = kvpairs[i].split(",");
-	 		
+	 		tree.insert(Integer.parseInt(key_or_value[0]), Double.parseDouble(key_or_value[1]));	 		
 	 	}
 	
       	// print out the keys using inorder
+	 	tree.traverse(1);
 	 	tree.traverse(2);
-      
+	 	tree.traverse(3);
       
 	 	// determine if the value 12 is in the tree
+	 	System.out.printf("%s%n", tree.find(12));
 
 	 	// determine if the value 80 is in the tree
+	 	System.out.printf("%s%n", tree.find(80));
      
 	 	// print out the minimum value in the tree 
-
+	 	System.out.printf("%s%n", tree.min());
+	 	
 	 	// print out the maximum value in the tree      
-      
+	 	System.out.printf("%s%n", tree.max());      
       
       } 
    }  
